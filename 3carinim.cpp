@@ -10,30 +10,32 @@ int main()
     cout << "=========================================" << endl;
 
     cout<< endl; 
-//informasi data array 2d
-string nimas[9][9]={{"111","dina"},
- {"112","deri"},{"113","ari"},{"114", "gadis"}, {"115","aji"},{"116", "adi"},{"117","bima"},{"118", "kuni"},{"119","Lina"}
+//informasi data array2d
+string nimas[7][7]={{"111","dina"},
+{"112","deri"},{"113","kuni"},
+{"114","ari"},{"115","lina"},
+{"116","aji"},{"117","doni"}
 };
 
-    // Input ids 
-    string ids; //menunjukkan string bernama ids
-    cout << "Masukkan id: ";
-    cin >> ids; //menyimpan data yang diinputkan 
+//operasi pencarian
+string ids; 
+cout << "Masukkan ID: ";
+cin >> ids;//menyimpan data yang dicari
 
-    // pencarian nim
-    int nemu = 0; //digunakan untuk menyimpan dan melacak yg dicari
-    for (int i = 0; i < 9; i++) {
-        if (nimas[i][0] == ids) {
-            // id ditemukan
-            cout << "Nama Mahasiswa: " << nimas[i][1] << endl;
-            nemu=1; //0 berubah 1 karena data cocok dengan yang dicari
-            break;
-            }
-    }
-    //bila tak ditemukan
-    //(!)mengevaluasi suatu kondisi dan mengembalikan nilai true jika kondisi itu salah dan nilai false jika benar. 
-    if(!nemu){
-    cout << "NIM tidak ditemukan " << endl;
-    }
-    return 0;
-}
+//operasi pencocokan data
+int nemu=0; //melacak dan mencocokkan data yang dicari 
+for(int i=0;i<7;i++){
+  if(nimas[i][0]==ids){
+  //ditemukan
+  cout << "Nama ditemukan: " <<nimas[i][1]<< endl;
+  nemu=1; //berubah karena data cocok sehingga 0 menjadi 1
+  break;
+  };
+  };
+  if(!nemu){
+  //mengevaluasi suatu kondisi dan mengembalikan nilai true jika kondisi itu salah dan nilai false jika benar.
+  //data tidak ditemukan 
+  cout << "ID tidak ada di data" << endl;
+  };
+  return 0;
+  };
