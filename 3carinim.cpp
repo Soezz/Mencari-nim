@@ -10,33 +10,28 @@ int main()
     cout << "=========================================" << endl;
 
     cout<< endl; 
-    // info nimmahasiswa
-    string nim_maha[30][30] = {
-        {"221112015","M. Zanuar F."},
-        {"221112024","A.Kholik"},
-        {"221112028","Rizal"},
-        {"221112021","A. Burhan S."},
-        {"221112022","Addin S.P."},
-        {"221112017","Kemal H."},
-        {"221112014","A. Faruk Akbar"}
-    };
+//informasi data array 2d
+string nimas[9][9]={{"111","dina"},
+ {"112","deri"},{"113","ari"},{"114", "gadis"}, {"115","aji"},{"116", "adi"},{"117","bima"},{"118", "kuni"},{"119","Lina"}
+};
 
-    // Input NIM
-    string NIM;
-    cout << "Masukkan NIM: ";
-    cin >> NIM;
+    // Input ids 
+    string ids; //menunjukkan string bernama ids
+    cout << "Masukkan id: ";
+    cin >> ids; //menyimpan data yang diinputkan 
 
     // pencarian nim
-    int nemu = 0;
-    for (int i = 0; i < 30; i++) {
-        if (nim_maha[i][0] == NIM) {
-            // NIM ditemukan
-            cout << "Nama Mahasiswa: " << nim_maha[i][1] << endl;
-            nemu=1;
+    int nemu = 0; //digunakan untuk menyimpan dan melacak yg dicari
+    for (int i = 0; i < 9; i++) {
+        if (nimas[i][0] == ids) {
+            // id ditemukan
+            cout << "Nama Mahasiswa: " << nimas[i][1] << endl;
+            nemu=1; //0 berubah 1 karena data cocok dengan yang dicari
             break;
             }
     }
     //bila tak ditemukan
+    //(!)mengevaluasi suatu kondisi dan mengembalikan nilai true jika kondisi itu salah dan nilai false jika benar. 
     if(!nemu){
     cout << "NIM tidak ditemukan " << endl;
     }
