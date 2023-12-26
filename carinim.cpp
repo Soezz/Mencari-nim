@@ -1,5 +1,6 @@
 #include<iostream>
 //coding by m.zanuar f.
+//yt:https://youtube.com/@sinauenjoy
 //mygit= https://github.com/Soezz?tab=repositories
 using namespace std;
 
